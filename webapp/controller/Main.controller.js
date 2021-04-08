@@ -12,14 +12,34 @@ sap.ui.define([
 			onInit: function () {
 
  // set data model on view
- var oData = {
+ var MockData = {
 	recipient : {
-	   name : "FioriUX"
+	   name : "FioriUX",
+	   lastname:"UI5",
+	   contact:"+91-999999999",
+	   email:"fioriux@xyx.com",
+	   address:"New York",
+	   city:"Banglore"
 	}
  };
- var oModel = new JSONModel(oData);
- this.getView().setModel(oModel);
 
-			}
+ // empty model - container
+ var oModel = new JSONModel(MockData); // it has content
+ this.getView().byId("idSimpleForm").setModel(oModel);
+
+
+ // CRM server data
+ var sUrl="";
+ var oModel = new JSONModel(sUrl); // it has content
+ this.getView().byId("ProfileID2").setModel(oModel);
+
+
+  // HR server data
+  var sHRUrl="";
+  var oModel = new JSONModel(sHRUrl); // it has content
+  this.getView().byId("ProfileID").setModel(oModel);
+
+			},
+
 		});
 	});

@@ -47,15 +47,15 @@
 							  </f:FormElement>
 										<f:FormElement label="Phone Number">
 																<f:fields>
-																	<Text text="+91-99999911223" id="idPhone"  />
+																	<Text text="{/recipient/contact}" id="idPhone"  />
 																</f:fields>
 															</f:FormElement>
 
 <!-- New Address -->
 															<f:FormElement label="Street">
 							<f:fields>
-								<Input value="{Street}" />
-								<Input value="{HouseNumber}">
+								<Input value="{/recipient/address}" />
+								<Input value="">
 									<layoutData>
 										<l:GridData span="XL4 L4 M4 S12" />
 									</layoutData>
@@ -76,7 +76,7 @@
 					</f:formElements>
 		</f:FormContainer>
 
-			<f:FormContainer title="Profile 1">
+			<f:FormContainer title="Profile 1" id ="ProfileID">
 					<f:formElements>
 						<f:FormElement label="Social Profile - LinkedIn">
 							<f:fields>
@@ -85,7 +85,7 @@
 						</f:FormElement>
 						<f:FormElement label="Social Profile - Twitter ">
 							<f:fields>
-								<Text text="www.Twitter.com" />
+								<Text text="{/recipient/address}" />
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>
