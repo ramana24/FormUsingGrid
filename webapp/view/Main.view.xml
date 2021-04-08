@@ -1,0 +1,130 @@
+<mvc:View
+    controllerName="ux.formexercise.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content >
+					<Panel id="expandablePanel" expandable="true" expanded="true" headerText="Form" expand="onExpand" width="auto" class="sapUiResponsiveMargin"></Panel>
+					
+					<f:Form id="idSimpleForm" editable="false">
+	          <!-- <f:title>
+				<core:Title text="Address" />
+			</f:title> -->
+				<f:layout>
+
+				<!-- layout 12 *12 -->
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="4"
+					columnsL="4"
+					columnsM="4"
+					singleContainerFullSize="false" />
+			</f:layout>
+	<f:formContainers>
+		<f:FormContainer title="Contact Form">
+   
+   
+                      <f:formElements>
+						      <f:FormElement label="UserName">
+										<f:fields>
+											<Text text="{/recipient/name}" id="idUserName"  />
+										</f:fields>
+							  </f:FormElement>
+										<f:FormElement label="Phone Number">
+																<f:fields>
+																	<Text text="+91-99999911223" id="idPhone"  />
+																</f:fields>
+															</f:FormElement>
+
+<!-- New Address -->
+															<f:FormElement label="Street">
+							<f:fields>
+								<Input value="{Street}" />
+								<Input value="{HouseNumber}">
+									<layoutData>
+										<l:GridData span="XL4 L4 M4 S12" />
+									</layoutData>
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code/City">
+							<f:fields>
+								<Input value="{ZIPCode}">
+									<layoutData>
+										<l:GridData span="XL4 L4 M4 S12" />
+									</layoutData>
+								</Input>
+								<Input value="{City}" />
+							</f:fields>
+						</f:FormElement>
+										<!-- End of Address  -->
+					</f:formElements>
+		</f:FormContainer>
+
+			<f:FormContainer title="Profile 1">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="www.Twitter.com" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Profile2">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="www.Twitter.com" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Profile 3">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="www.Twitter.com" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+	</f:formContainers>
+			        </f:Form>
+					
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
