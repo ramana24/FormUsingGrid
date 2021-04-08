@@ -7,7 +7,7 @@
 	xmlns:f="sap.ui.layout.form"
 >
 	<Shell id="shell">
-		<App id="app">
+		<App id="app" class="sapUiSizeCozy">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content >
@@ -123,6 +123,7 @@
 					
 					
 					</content>
+					<Button class="sapUiVisibleOnlyOnDesktop" text="UI5 Density"></Button>
 				</Page>
 			</pages>
 		</App>

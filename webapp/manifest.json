@@ -24,6 +24,7 @@
   },
   "sap.ui": {
     "technology": "UI5",
+    "fullWidth": true,
     "icons": {
       "icon": "sap-icon://task",
       "favIcon": "",
@@ -75,6 +76,11 @@
       "css": [
         {
           "uri": "css/style.css"
+        }
+      ],
+      "util": [
+        {
+          "uri": "util/code.js"
         }
       ]
     },

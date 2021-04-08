@@ -25,19 +25,19 @@ sap.ui.define([
 
  // empty model - container
  var oModel = new JSONModel(MockData); // it has content
- this.getView().byId("idSimpleForm").setModel(oModel);
+ this.getView().setModel(oModel);
 
 
  // CRM server data
  var sUrl="";
  var oModel = new JSONModel(sUrl); // it has content
- this.getView().byId("ProfileID2").setModel(oModel);
+ //this.getView().byId("ProfileID2").setModel(oModel);
 
 
   // HR server data
   var sHRUrl="";
   var oModel = new JSONModel(sHRUrl); // it has content
-  this.getView().byId("ProfileID").setModel(oModel);
+  //this.getView().byId("ProfileID").setModel(oModel);
 
 			},
 
