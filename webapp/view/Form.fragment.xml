@@ -1,0 +1,120 @@
+<core:FragmentDefinition
+   xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="helloDialog"
+      title="Hello {/recipient/name}">
+      <content>
+      <f:Form id="idSimpleFormDialog" editable="false">
+	          <!-- <f:title>
+				<core:Title text="Address" />
+			</f:title> -->
+				<f:layout>
+
+				<!-- layout 12 *12 -->
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="4"
+					columnsL="4"
+					columnsM="4"
+					singleContainerFullSize="false" />
+			</f:layout>
+	<f:formContainers>
+		<f:FormContainer title="Contact Form">
+   
+   
+                      <f:formElements>
+						      <f:FormElement label="UserName">
+										<f:fields>
+											<Text text="{/recipient/name}" id="idUserNameD"  />
+										</f:fields>
+							  </f:FormElement>
+										<f:FormElement label="Phone Number">
+																<f:fields>
+																	<Text text="{/recipient/contact}" id="idPhoneD"  />
+																</f:fields>
+															</f:FormElement>
+
+<!-- New Address -->
+															<f:FormElement label="Street">
+							<f:fields>
+								<Input value="{/recipient/address}" />
+								<Input value="">
+									<layoutData>
+										<l:GridData span="XL4 L4 M4 S12" />
+									</layoutData>
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code/City">
+							<f:fields>
+								<Input value="{ZIPCode}">
+									<layoutData>
+										<l:GridData span="XL4 L4 M4 S12" />
+									</layoutData>
+								</Input>
+								<Input value="{City}" />
+							</f:fields>
+						</f:FormElement>
+										<!-- End of Address  -->
+					</f:formElements>
+		</f:FormContainer>
+
+			<f:FormContainer title="Profile 1" id ="ProfileIDialog">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="{/recipient/address}" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Profile2">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="www.Twitter.com" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Profile 3">
+					<f:formElements>
+						<f:FormElement label="Social Profile - LinkedIn">
+							<f:fields>
+								<Text text="www.linkedIn.com" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Social Profile - Twitter ">
+							<f:fields>
+								<Text text="www.Twitter.com" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+	</f:formContainers>
+			        </f:Form>
+      </content>
+      <beginButton>
+      <Button text="close" press="onClose"></Button></beginButton>
+   </Dialog>
+</core:FragmentDefinition>

@@ -13,117 +13,12 @@
 					<content >
 					<Panel id="expandablePanel" expandable="true" expanded="true" headerText="Form" expand="onExpand" width="auto" class="sapUiResponsiveMargin"></Panel>
 					
-					<f:Form id="idSimpleForm" editable="false">
-	          <!-- <f:title>
-				<core:Title text="Address" />
-			</f:title> -->
-				<f:layout>
-
-				<!-- layout 12 *12 -->
-				<f:ResponsiveGridLayout
-					labelSpanXL="4"
-					labelSpanL="4"
-					labelSpanM="4"
-					labelSpanS="12"
-					adjustLabelSpan="false"
-					emptySpanXL="4"
-					emptySpanL="4"
-					emptySpanM="4"
-					emptySpanS="0"
-					columnsXL="4"
-					columnsL="4"
-					columnsM="4"
-					singleContainerFullSize="false" />
-			</f:layout>
-	<f:formContainers>
-		<f:FormContainer title="Contact Form">
-   
-   
-                      <f:formElements>
-						      <f:FormElement label="UserName">
-										<f:fields>
-											<Text text="{/recipient/name}" id="idUserName"  />
-										</f:fields>
-							  </f:FormElement>
-										<f:FormElement label="Phone Number">
-																<f:fields>
-																	<Text text="{/recipient/contact}" id="idPhone"  />
-																</f:fields>
-															</f:FormElement>
-
-<!-- New Address -->
-															<f:FormElement label="Street">
-							<f:fields>
-								<Input value="{/recipient/address}" />
-								<Input value="">
-									<layoutData>
-										<l:GridData span="XL4 L4 M4 S12" />
-									</layoutData>
-								</Input>
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="ZIP Code/City">
-							<f:fields>
-								<Input value="{ZIPCode}">
-									<layoutData>
-										<l:GridData span="XL4 L4 M4 S12" />
-									</layoutData>
-								</Input>
-								<Input value="{City}" />
-							</f:fields>
-						</f:FormElement>
-										<!-- End of Address  -->
-					</f:formElements>
-		</f:FormContainer>
-
-			<f:FormContainer title="Profile 1" id ="ProfileID">
-					<f:formElements>
-						<f:FormElement label="Social Profile - LinkedIn">
-							<f:fields>
-								<Text text="www.linkedIn.com" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Social Profile - Twitter ">
-							<f:fields>
-								<Text text="{/recipient/address}" />
-							</f:fields>
-						</f:FormElement>
-					</f:formElements>
-				</f:FormContainer>
-				<f:FormContainer title="Profile2">
-					<f:formElements>
-						<f:FormElement label="Social Profile - LinkedIn">
-							<f:fields>
-								<Text text="www.linkedIn.com" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Social Profile - Twitter ">
-							<f:fields>
-								<Text text="www.Twitter.com" />
-							</f:fields>
-						</f:FormElement>
-					</f:formElements>
-				</f:FormContainer>
-				<f:FormContainer title="Profile 3">
-					<f:formElements>
-						<f:FormElement label="Social Profile - LinkedIn">
-							<f:fields>
-								<Text text="www.linkedIn.com" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Social Profile - Twitter ">
-							<f:fields>
-								<Text text="www.Twitter.com" />
-							</f:fields>
-						</f:FormElement>
-					</f:formElements>
-				</f:FormContainer>
-	</f:formContainers>
-			        </f:Form>
+				
 					
 					
 					</content>
-					<Button class="sapUiVisibleOnlyOnDesktop" text="UI5 Density"></Button>
+					<Button class="sapUiVisibleOnlyOnDesktop" text="UI5 Density" press="onOpenDialog"></Button>
+				<Button text="OpenDialog" press="onOpenDialog2"> </Button>
 				</Page>
 			</pages>
 		</App>

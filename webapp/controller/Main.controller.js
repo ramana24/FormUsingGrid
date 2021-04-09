@@ -1,11 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel",
+	"sap/ui/core/Fragment"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller,JSONModel) {
+	function (Controller,JSONModel,Fragment) {
 		"use strict";
 
 		return Controller.extend("ux.formexercise.controller.Main", {
@@ -39,6 +40,52 @@ sap.ui.define([
   var oModel = new JSONModel(sHRUrl); // it has content
   //this.getView().byId("ProfileID").setModel(oModel);
 
+			},
+
+			onOpenDialog : function () {
+
+				var that=this;
+				var oView = this.getView();
+	
+				// create dialog lazily
+				if (!this.pDialog) {
+					this.pDialog = Fragment.load({
+						id: oView.getId(),
+						name: "ux.formexercise.view.Form"
+					}).then(function (oDialog) {
+						// connect dialog to the root view of this component (models, lifecycle)
+						oView.addDependent(oDialog);
+						return oDialog;
+					});
+				} 
+				this.pDialog.then(function(oDialog) {
+					oDialog.open();
+				});
+			},
+			onClose:function(){
+				var oDialog = this.getView().byId("helloDialog");
+				oDialog.close();
+			},
+
+			onOpenDialog2 : function () {
+
+				var that=this;
+				var oView = this.getView();
+	
+				// create dialog lazily
+				if (!this.pDialog) {
+					this.pDialog = Fragment.load({
+						id: oView.getId(),
+						name: "ux.formexercise.view.Form1"
+					}).then(function (oDialog) {
+						// connect dialog to the root view of this component (models, lifecycle)
+						oView.addDependent(oDialog);
+						return oDialog;
+					});
+				} 
+				this.pDialog.then(function(oDialog) {
+					oDialog.open();
+				});
 			},
 
 		});
