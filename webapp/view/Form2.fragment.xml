@@ -1,18 +1,14 @@
-<mvc:View
-    controllerName="ux.formexercise.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
-	xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form"
+<core:FragmentDefinition
+ xmlns="sap.m" 
+ xmlns:l="sap.ui.layout"
+ xmlns:f="sap.ui.layout.form"
+ xmlns:core="sap.ui.core"
 >
-	<Shell id="shell">
-		<App id="app" class="border">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content >
-					<Panel id="expandablePanel" expandable="true" expanded="true" headerText="Form" expand="onExpand" width="auto" class="sapUiResponsiveMargin"></Panel>
-						<f:Form id="idSimpleForm" editable="false">
+
+
+<Dialog id="Form3" contentHeight="50%" contentWidth="50%" draggable="true" resizable="true" stretch="false" title="SimpleForm">
+<content>
+<f:Form id="idSimpleForm34" editable="false">
 	          <!-- <f:title>
 				<core:Title text="Address" />
 			</f:title> -->
@@ -41,12 +37,12 @@
                       <f:formElements>
 						      <f:FormElement label="UserName">
 										<f:fields>
-											<Text text="{/recipient/name}" id="idUserName"  />
+											<Text text="{/recipient/name}" id="idUserName12"  />
 										</f:fields>
 							  </f:FormElement>
 										<f:FormElement label="Phone Number">
 																<f:fields>
-																	<Text text="{/recipient/contact}" id="idPhone"  />
+																	<Text text="{/recipient/contact}" id="idPhone12"  />
 																</f:fields>
 															</f:FormElement>
 
@@ -75,7 +71,7 @@
 					</f:formElements>
 		</f:FormContainer>
 
-			<f:FormContainer title="Profile 1" id ="ProfileID">
+			<f:FormContainer title="Profile 1" id ="ProfileID12">
 					<f:formElements>
 						<f:FormElement label="Social Profile - LinkedIn">
 							<f:fields>
@@ -89,7 +85,7 @@
 						</f:FormElement>
 					</f:formElements>
 				</f:FormContainer>
-				<f:FormContainer title="Profile2">
+				<f:FormContainer title="Profile212">
 					<f:formElements>
 						<f:FormElement label="Social Profile - LinkedIn">
 							<f:fields>
@@ -119,15 +115,25 @@
 				</f:FormContainer>
 	</f:formContainers>
 			        </f:Form>
-				
-					
-					
-					</content>
-					<Label class="sapUiTinyMargin" text="press Esc to close dialog"></Label>
-					<Button class="sapUiVisibleOnlyOnDesktop sapUiSizeCozy" text="UI5 Density" press="onOpenDialog2"></Button>
-				<!-- <Button text="OpenDialog" press="onOpenDialog2"> </Button> -->
-				</Page>
-			</pages>
-		</App>
-	</Shell>
-</mvc:View>
+
+
+
+
+</content>
+
+<beginButton>
+<Button text="Save"></Button>
+</beginButton>
+<endButton>
+<Button text="Close"></Button>
+</endButton>
+</Dialog>
+
+
+
+
+
+
+
+
+</core:FragmentDefinition>

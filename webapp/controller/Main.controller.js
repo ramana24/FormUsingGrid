@@ -76,7 +76,7 @@ sap.ui.define([
 				if (!this.pDialog) {
 					this.pDialog = Fragment.load({
 						id: oView.getId(),
-						name: "ux.formexercise.view.Form1"
+						name: "ux.formexercise.view.Form2"
 					}).then(function (oDialog) {
 						// connect dialog to the root view of this component (models, lifecycle)
 						oView.addDependent(oDialog);
