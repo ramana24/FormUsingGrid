@@ -86,7 +86,36 @@ sap.ui.define([
 				this.pDialog.then(function(oDialog) {
 					oDialog.open();
 				});
-			},
+            },
+            
+            onSave:function(oEvent){
+
+                	var oDraftIndi = this.byId("draftIndi");
+         //   oDraftIndi.showDraftSaving();
+                oDraftIndi.showDraftSaved();
+             //   	oDraftIndi.clearDraftState();
+
+        var     oName= this.getView().byId("name").getValue();
+           var     ostreet= this.getView().byId("street").getValue();
+
+           var oUser= {
+               Name: oName,
+               Street : ostreet
+
+           };
+
+sap.m.MessageToast.show(oName);
+
+var oModel = new ODataModel("/CreateUser");
+
+oModel.createEntry("/CreateUser",oUser);
+
+oModel.read("/CreateUser('"+oName+"')");
+oVeiw.setModel(oModel);
+//alert(oName);
+
+
+            }
 
 		});
 	});
